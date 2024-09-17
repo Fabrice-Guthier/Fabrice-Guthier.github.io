@@ -598,7 +598,7 @@ section {
   /* footer */
 
   footer {
-    margin-top:  300px;
+    border-top: 300px;
     background: linear-gradient(to right, #818f87, #536976, #292e49);
     border-bottom: 1px solid #EEE;
     color: #EEE;
