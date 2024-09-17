@@ -539,7 +539,7 @@ section {
 
   /* image zoom centré on click */
   .card:active {
-    height: 80vh;
+    height: 95vh;
     width: auto;
     position: fixed;
     top: 50%;
@@ -548,7 +548,7 @@ section {
     transform: translate(-50%, -50%);
 
     .hidden {
-      visibility: visible;
+      display: flex;
       text-align: center;
       opacity: 1;
       color: #333;
@@ -558,7 +558,7 @@ section {
 
   /* texte caché quand l'image n'est pas cliquée*/
   .hidden {
-    visibility: hidden;
+    display: none;
     opacity: 0;
   }
 
