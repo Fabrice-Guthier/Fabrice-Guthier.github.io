@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+
+<head>
+    <meta charset="utf-8" />
+    <title>Portfolio - Fabrice GUTHIER</title>
+    <link rel="stylesheet" href="./CSS/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="icon" href="./assets/images/favicon.ico">
+    <link rel="stylesheet" href="./CSS/style.css">
+    <script src="./JS/app.js" defer></script>
+
+</head>
+/* defer pour charger après tout le reste */
+
+<body>
+
+    <header class="header">
+        <div class="container d-flex">
+            <div class="logo">
+                Fabrice GUTHIER
+            </div>
+            <nav class="navbar">
+                <ul class="menu list-unstyled">
+                    <li><a href="#hero">Accueil</a></li>
+                    <li><a href="#about">A propos</a></li>
+                    <li><a href="#skills">Mes compétences</a></li>
+                    <li><a href="#parcours">Mon parcours</a></li>
+                    <li><a href="#projets">Mes projets</a></li>
+                    <li><a href="#contact">Me contacter</a></li>
+                </ul>
+            </nav>
+            <div class="topright">
+                <ul class="socials list-unstyled">
+                    <li><a href="https://www.linkedin.com/in/fabrice-guthier-153682274" class="icon linkedin"><i
+                                class="fab fa-linkedin"></i></a></li>
+                    <li><a href="https://github.com/Fabrice-Guthier" class="icon github"><i
+                                class="fab fa-github"></i></a></li>
+                    <li><a href="https://www.facebook.com" class="icon facebook"><i class="fab fa-facebook"></i></a>
+                    </li>
+                    <li><a href="https://www.twitter.com" class="icon twitter"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="https://www.instagram.com" class="icon instagram"><i class="fab fa-instagram"></i></a>
+                    </li>
+                </ul>
+                <button class="burger"><span class="bar"></span></button>
+            </div>
+        </div>
+    </header>
+
+    <section id="hero" class="hero">
+        <div class="container">
+            <div class="grid">
+                <div class="hero__item">
+                    <span>Développeur CDA</span>
+                    <h1 class="title">Bonjour, je suis Fabrice GUTHIER</h1>
+                    <p><strong>Développeur CDA C#/ASP.NET</strong>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="about" class="about">
+        <div class="container">
+            <div class="grid">
+                <div class="grid__item">
+                    <img src="./assets/images/xavatario.svg" loading="lazy"
+                        alt="Fabrice GUTHIER - Dévelippeur CDA - en personne">
+                </div>
+                <div class="grid__item">
+                    <h2 class="section-title">Quelques informations</h2>
+                    <h3>Qui suis-je</h3>
+                    <p>Laissez-moi me présenter, je m'appelle <strong>Fabrice GUTHIER</strong>, j'ai 43 ans, et après 16
+                        ans de carrière dans les télécoms,
+                        j'ai décidé de me diriger vers ma passion pricipale, <strong> l'informatique </strong>.
+                        </br>
+                        Je suis diplômé en développement d'applications en <strong> client/serveur VB-SQL</strong>.
+                        </br>
+                        Je suis titulaire d'une <strong>RQTH inclusion/mobilité</strong>, ce qui ne m'empêche pas de
+                        travailler, au contraire je suis <strong> plus motivé que jamais </strong>, mais ma
+                        <strong>mobilité est très fortement impactée</strong>.
+                        </br>
+                        Voici un aperçu des mes passions:
+                    </p>
+                    <ul>
+                        <li>Informatique</li>
+                        <li>Musique</li>
+                        <li>Jeux vidéo</li>
+                        <li>Cinéma</li>
+                        <li>Photographie</li>
+                        <li>LEGO</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Mes compétences</h2>
+                <p>Depuis mon plus jeune âge, <span class="motsgras">je suis tombé dans le monde de
+                        l'informatique</span>, et j'ai tout
+                    de suite découvert une passion naissante.
+                    Il ne m'a pas fallu longtemps pour commencer à désassembler des PC pour <span
+                        class="motsgras">comprendre comment cela
+                        fonctionne</span>, puis les assembler de A à Z, pour moi comme pour mon entourage, si bien que
+                    je ne compte plus les
+                    <span class="motsgras">dizaines de PC que j'ai assemblé</span> au fil des années.
+                    </br>
+                    <span class="motsgras">Voici un condensé des mes compétences</span>:
+                </p>
+            </div>
+            <div class="grid">
+                <div class="grid__item">
+                    <div class="skill">
+                        <div class="skill__icon">
+                            <img src="./assets/images/shopping_cart.svg" alt="CONSULTANT HARDWARE PC">
+                        </div>
+                        <div class="skill__content">
+                            <h3>CONSULTANT HARDWARE PC</h3>
+                            <ul>
+                                <li>conseils et assistance de l'utilisateur novice pour un apprentissage convivial</li>
+                                <li>explication sur le fonctionnement de la machine et la thermodynamique</li>
+                                <li>choix des composants pour permettre une efficacité optimale de la machine</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill__icon">
+                            <img src="./assets/images/install_pc.svg" alt="ASSEMBLAGE ET ENTRETIEN COMPLETS DE PC">
+                        </div>
+                        <div class="skill__content">
+                            <h3>ASSEMBLAGE ET ENTRETIEN COMPLETS DE PC</h3>
+                            <ul>
+                                <li>assemblage complet de PC, cable management</li>
+                                <li>installation des programmes à partir d'une clé USB spécialement faite pour une
+                                    machine vierge</li>
+                                <li>installation des périphériques, raccordements et cable management</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill__icon">
+                            <img src="./assets/images/network_manage.svg" alt="GESTION DE RESEAUX DOMICILES">
+                        </div>
+                        <div class="skill__content">
+                            <h3>GESTION DE RESEAUX DOMICILES</h3>
+                            <ul>
+                                <li>installation box, routeurs, répéteurs, boîtiers CPL</li>
+                                <li>paramétrage des équipements</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill__icon">
+                            <img src="./assets/images/lan.svg" alt="ORGANISATION ET CABLE MANAGEMENT">
+                        </div>
+                        <div class="skill__content">
+                            <h3>ORGANISATION ET CABLE MANAGEMENT</h3>
+                            <ul>
+                                <li>réalisation complète de 'cable management'</li>
+                                <li>installation de supports d'accroche de passage de câbles</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid__item">
+                    <div class="skill">
+                        <div class="skill__icon">
+                            <img src="./assets/images/lignes_install.svg" alt="RACCORDEMENTS LIGNES CUIVRES">
+                        </div>
+                        <div class="skill__content">
+                            <h3>RACCORDEMENTS LIGNES CUIVRES</h3>
+                            <ul>
+                                <li>raccordement de ligne cuivre abonné 'grand public' et professionnel de A à Z</li>
+                                <li>test de continuité et de stabilité de ligne</li>
+                                <li>raccordement de lignes cuivres dites spéciales</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill__icon">
+                            <img src="./assets/images/router.svg" alt="installation de routeurs">
+                        </div>
+                        <div class="skill__content">
+                            <h3>INSTALLATION ROUTEUR PROFESSIONNELS</h3>
+                            <ul>
+                                <li>installations et paramétrages de routeurs sur lignes cuivres et fibres optiques</li>
+                                <li>inatallations de routeus voix sur autocom avec paramétrages et tests</li>
+                                <li>paramétrage de routeurs professionnels</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill__icon">
+                            <img src="./assets/images/phone_disabled.svg" alt="dépannages de lignes cuivres">
+                        </div>
+                        <div class="skill__content">
+                            <h3>DEPANNAGE LIGNES CUIVRES</h3>
+                            <ul>
+                                <li>dépannage de lignes cuivres pour les abonnés 'grand public' et professionnels</li>
+                                <li>test capacitif de ligne cuivre</li>
+                                <li>remplacement de carte XDSL dans la baie du NRA</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill__icon">
+                            <img src="./assets/images/cable.svg" alt="raccordement câbles RJ45">
+                        </div>
+                        <div class="skill__content">
+                            <h3>RACCORDEMENT ET RECETTE DE CABLES RJ45</h3>
+                            <ul>
+                                <li>tirages, branchements et recettes de câbles et prises RJ45 cat5e/cat6</li>
+                                <li>nettoyage et 'cable management' de baie de brassage réseau</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="parcours" class="parcours">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Mon parcours</h2>
+                <p>Sorti du lycée avec un Bac de section technique du tertiaire en gestion, je me suis dirigé vers une
+                    formation en
+                    développement informatique d'un an, de laquelle je suis sorti diplômé d'un bac+2 en <span
+                        class="motsgras">"développement d'applications
+                        informatiques de gestion en relation client/serveur" en langages Visual Basic et ORACLE
+                        (SQL)</span>.</br>
+                    Pourquoi avoir choisi cette voie? Simplement parce que l'informatique est ma <span
+                        class="motsgras">grande
+                        passion</span>, sous toutes ses formes, hardware, softwares, installations, entretiens,
+                    dépannages. C'était donc
+                    <span class="motsgras">un choix évident</span> pour moi de me diriger vers une voie dans le monde du
+                    travail
+                    numérique.</br>
+                    N'ayant pas eu la chance de trouver un emploi juste après mon diplôme en 2003, j'ai fait toutes
+                    sortes d'activités
+                    professionnelles pendant quelques années, jusqu'en 2008 où j'ai une opportinuté de travailler dans
+                    le <span class="motsgras">réseau et les télécommunications</span>. Activité dans laquelle j'ai
+                    appris
+                    beaucoup de choses
+                    dans un dommaine très riche en technologies.</br>
+                    Dans ce métier j'ai fait toutes sortes d'acivités, du câblage, à l'installation de routeurs
+                    professionnels pour de
+                    la voix ou de la data, en passant par le dépannage de lignes cuivres. Mais la <span
+                        class="motsgras">compétence qui
+                        s'est le plus développée pendant ces 16 années, c'est la résolution de problèmes</span>. Chaque
+                    dépannage avait
+                    sa solution propre, et ce fût rare de voir le même problème plusieurs fois d'affilées.</br>
+                    Mon expérience dans ce métier a dû s'arréter à cause d'un accident de travail qui m'a sérieusement
+                    endommagé le pied
+                    droit.
+                    Aujourd'hui je suis en reconversion professionnelle avec pour but de trouver un emploi adapté à ma
+                    situation.
+                </p>
+            </div>
+            <div class="grid">
+                <div class="grid__item">
+                    <h3>Diplômes et compétences</h3>
+                    <div class="cv-zoom">
+                        <label>
+                            <input type="checkbox">
+                            <img src="./assets/images/CV.jpg" alt="image cv" width=100% height=auto>
+                        </label>
+                    </div>
+                </div>
+                <div class="grid__item">
+                    <h3>Soft skills</h3>
+                    <div class="progressbar">
+                        <div class="bar" style="width: 100%;">PATIENCE</div>
+                    </div>
+                    <div class="progressbar">
+                        <div class="bar" style="width: 95%;">AUTONOMIE</div>
+                    </div>
+                    <div class="progressbar">
+                        <div class="bar" style="width: 95%;">ADAPTABILITE</div>
+                    </div>
+                    <div class="progressbar">
+                        <div class="bar" style="width: 90%;">FIABILITE</div>
+                    </div>
+                    <div class="progressbar">
+                        <div class="bar" style="width: 85%;">RESOLUTION DE PROBLEMES</div>
+                    </div>
+                    <div class="progressbar">
+                        <div class="bar" style="width: 80%;">REACTIVITE</div>
+                    </div>
+                    <h3>Compétences en cours de développement</h3>
+                    <div class="progressbar">
+                        <div class="bar" style="width: 65%;">VISUAL BASIC</div>
+                    </div>
+                    <div class="progressbar">
+                        <div class="bar" style="width: 60%;">SQL</div>
+                    </div>
+                    <div class="progressbar">
+                        <div class="bar" style="width: 50%;">ZONING </div>
+                    </div>
+                    <div class="progressbar">
+                        <div class="bar" style="width: 30%;">HTML</div>
+                    </div>
+                    <div class="progressbar">
+                        <div class="bar" style="width: 25%;">CSS</div>
+                    </div>
+                    <div class="progressbar">
+                        <div class="bar" style="width: 21%;">JAVASCRIPT</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section id="projets" class="projets">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Mes projets</h2>
+                <p>Avec mon expérience professionnelle ainsi que personnelle, je sais exactement comment fonctionne le
+                    monde de l'informatique. Le montage, les logiciels, le réseau, le développement sont des choses qui
+                    m'accompagnent au quotidien. C'est pour ça que je veux continuer à faire ce que j'aime, vivre dans
+                    le monde de l'informatique.</p>
+            </div>
+            <ul class="grid projets-filters list-unstyled">
+                <li class="grid__item">
+                    <p>IT</p>
+                </li>
+                <li class="grid__item">
+                    <p>Formations</p>
+                </li>
+                <li class="grid__item">
+                    <p>Emplois</p>
+                </li>
+                <li class="grid__item">
+                    <p>Autodidaxie</p>
+                </li>
+            </ul>
+            <div class="grid">
+                <div class="grid__item">
+                    <div class="card">
+                        <img src="./assets/images/projet_pc_480.jpg" alt="Projets en informatique" class="card__image">
+                        <div class="card__inner">
+                            <h3 class="card__title">Projets PC</h3>
+                            <p class="category">Assemblages hardware </br> Plus qu'une passion, un mode de vie</p>
+                            <p class="hidden">Depuis mon enfance, je suis tombé dans l'informatique, en commençant par un ATARI ST-Mega1, il existait déjà une interface graphique avec le TOS (The Operating
+                            System), on pouvait commencer à faire un peu de développement.
+                            Bien sûr cette passion n'a fait que de s'accroître au fil des années. Passant d'utilisateur à dépanneur, puis assembleur de PC pour moi et mon entourage.
+                            Je peux dire que j'adore assembler, entretenir, optimiser des PC en hardware mais aussi en software, où mon expérience du dépannage m'apporte beaucoup de rapidité dans les résolutions de problèmes.
+                            </p>
+                        </div>
+                        <div class="card__overlay">
+                        </div>
+                    </div>
+                </div>
+                <div class="grid__item">
+                    <div class="card">
+                        <img src="./assets/images/PC23.jpg" alt="Formations à venir" class="card__image">
+                        <div class="card__inner">
+                            <h3 class="card__title">Projets de formations</h3>
+                            <p class="category">Développement informatique</p>
+                            <p class="hidden">Il va de soi que travailler dans l'informatique est un rêve pour moi, vivre de cette passion serait extraordinnaire, qui plus est c'est un domaine qui est en adéquation avec ma situation de santé actuelle.</p>
+
+                        </div>
+                        <div class="card__overlay">
+                        </div>
+                    </div>
+                </div>
+                <div class="grid__item">
+                    <div class="card">
+                        <img src="./assets/images/réseaux1_480.jpg" alt="Ma carrière professionnelle"
+                            class="card__image">
+                        <div class="card__inner">
+                            <h3 class="card__title">Ma carrière</h3>
+                            <p class="category">Réseaux et télécom</p>
+                            <p class="hidden">Mes connaissances dans le monde de l'informatique, mais aussi du réseau, m'ont permis de commencer une carrière
+                            qui a duré 16 ans dans les réseaux et télécommunications.
+                            Durant cette carrière j'ai vu la plupart des activités de technicien</p>
+                        </div>
+                        <div class="card__overlay">
+                        </div>
+                    </div>
+                </div>
+                <div class="grid__item">
+                    <div class="card">
+                        <img src="./assets/images/PC4.jpg" alt="Autodidaxie" class="card__image">
+                        <div class="card__inner">
+                            <h3 class="card__title">Mes apprentissages personnels</h3>
+                            <p class="category">Assemblages hardware et anglais</p>
+                            <p class="hidden">Que ce soit l'assemblage, l'entretien ou l'optimisation se systèmes, j'ai tout appris par moi même, j'ai bien entendu eu recours à internet pour trouver des sources dans certains cas compliqués. Aujourd'hui j'aide un maximum de personnes sur internet lorsqu'ils ont des problèmes avec leurs PC.
+                                90% du temps les personnes que j'aide sont anglophones, ce qui m'a permis d'élever mon niveau d'anglais à un niveau plus que correct aujourd'hui, aussi bien en anglais techinique que courant.
+                            </p>
+                        </div>
+                        <div class="card__overlay">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Me contacter</h2>
+                <p>Si mon profil vous intéresse, n'hésitez pas à prendre contact avec moi pour de plus amples
+                    informations.</p>
+            </div>
+
+            <form action="contact.php" class="form">
+                <label for="lastname">
+                    <input type="text" name="lastname" id="lastname" placeholder="Nom">
+                </label>
+                <label for="firstname">
+                    <input type="text" name="firstname" id="firstname" placeholder="Prénom">
+                </label>
+                <label for="email">
+                    <input type="email" name="email" id="email" placeholder="E-Mail">
+                </label>
+                <textarea name="message" id="message" placeholder="Message"></textarea>
+                <input type="submit" class="btn" value="Envoyer">
+            </form>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="container">
+            <div class="grid">
+                <div class="grid__item">
+                    <p class="footer__logo">Fabrice Guthier</p>
+                </div>
+            </div>
+            <div class="grid">
+                <div class="grid__item">
+                    <ul class="socials list-unstyled">
+                        <li><a href="https://www.linkedin.com/in/fabrice-guthier-153682274" class="lien-linkedin"><i
+                                    class="fab fa-linkedin"></i></a></li>
+                        <li><a href="https://github.com/Fabrice-Guthier" class="lien-github"><i
+                                    class="fab fa-github"></i></a></li>
+                        <li><a href="https://www.facebook.com" class="lien-facebook"><i class="fab fa-facebook"></i></a>
+                        </li>
+                        <li><a href="https://www.twitter.com" class="lien-twitter"><i class="fab fa-twitter"></i></a>
+                        </li>
+                        <li><a href="https://www.instagram.com" class="lien-instagram"><i
+                                    class="fab fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="grid">
+                <div class="grid__item">
+                    <p>© Fabrice Guther, Num & Boost Session 13, 2024. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

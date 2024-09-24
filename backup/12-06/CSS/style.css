@@ -1,0 +1,275 @@
+
+/* Voici le CSS de mon portfolio */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+/* Police du site ajoutée */
+
+/* Corps du site */
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.6rem;
+  color: #333333;
+  margin: 0;
+  background: linear-gradient(to right, #dceeff, #ffffff);
+}
+
+/* les titres */
+
+h1, h2, h3, h4, h5, h6 {
+  color: #000;
+  font-family: "PT sans";
+}
+
+h1,
+.h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+h2,
+.h2 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+}
+
+h3,
+.h3 {
+  font-size:2rem;
+}
+
+/* les liens */
+
+a {
+  text-decoration: none;
+}
+
+.header a:hover {
+  color: rgb(255, 123, 0)
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.list-unstyled {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  padding: 1rem 2rem;
+}
+
+.d-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.grid__item {
+  width: 100%;
+  padding: 1rem;
+}
+
+@media screen and (min-width:750px) {
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  .grid__item{
+    max-width: 50%;
+  }
+}
+
+/* Sections */
+
+section {
+  padding: 5.5rem 0;
+}
+
+@media screen and (max-width:749px) {
+  .section-header {
+    text-align: center;
+  }
+  nav {
+    position: fixed;
+  }
+}
+.section-title {
+  margin-top: 0;
+  color: #000;
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+
+.header {
+  background: linear-gradient(to right, #818f87, #536976, #292e49);
+  border-bottom: 1px solid #EEE;
+  color: #EEE;
+}
+
+.header .logo {
+  font-size: 2rem;
+  font-family: "PT sans";
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #EEE;
+}
+
+.navbar {
+  display: none;
+  color: #EEE;
+}
+
+.header li {
+  display: inline-flex;
+  align-items: center;
+  padding: 0 5px;
+  color: #EEE;
+}
+
+.header a {
+  /* color: #444; */
+  color: #EEE;
+}
+
+.header .topright {
+  display: flex;
+  align-items: center;
+  color: #EEE;
+}
+
+.socials{
+  display: flex;
+}
+.socials a {
+  padding: 0 5px;
+}
+.socials .icon {
+  height: 16px;
+}
+
+.burger {
+  background: none;
+  border: none;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  position: relative;
+  margin-left: 1rem;
+  color: #EEE;
+}
+
+.burger .bar {
+  display: block;
+  width: 22px;
+  height: 3px;
+  background-color: #EEE;
+}
+
+.burger .bar::before, .burger .bar::after {
+  display: block;
+  content: "";
+  width: 22px;
+  height: 3px;
+  background-color: #EEE;
+  position: absolute;
+}
+
+.burger .bar::before {
+  transform: translateY(-6px);
+}
+
+.burger .bar::after {
+ transform: translateY(6px);
+}
+
+@media screen and (max-width:749px) {
+
+}
+@media screen and (min-width:750px) {
+  .navbar{
+    display: flex;
+  }
+  .burger {
+    display: none;
+  }
+}
+
+.hero {
+  padding: 1rem 0 0 0;
+  background: linear-gradient(to right, #16222a, #3a6073);
+  color: #FFF;
+}
+
+.hero .title {
+  font-size: 3.5rem;
+  margin: 1rem 0 0 0;
+  color: inherit;
+}
+.hero__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero__item span {
+  text-transform: uppercase;
+}
+
+@media screen and (min-width:750px) {
+  .hero__item {
+      flex: 1 0 50%;
+  }
+  .hero .title {
+    font-size: 6rem;
+    margin: 1rem 0 0 0;
+  }
+}
+
+.about .section-title {
+  margin-top: 2.3rem;
+}
+
+@media screen and (min-width:750px) {
+  .about img {
+    padding-right: 3rem;
+  }
+
+}
+
+.skills {}
+
+.skills__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  width: 90px;
+  height: 90px;
+  margin: 0 auto;
+}
+
+
+@media screen and (max-width:749px) {
+
+}
