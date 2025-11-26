@@ -3,16 +3,24 @@
   "WorkspaceRootPath": "C:\\DEV\\Portfolio\\Fabrice-Guthier.github.io\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{3A326EED-2DBB-46C4-8524-478C6312FFC3}|Portfolio\\Portfolio.csproj|c:\\dev\\portfolio\\fabrice-guthier.github.io\\portfolio\\wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3A326EED-2DBB-46C4-8524-478C6312FFC3}|Portfolio\\Portfolio.csproj|solutionrelative:portfolio\\wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A326EED-2DBB-46C4-8524-478C6312FFC3}|Portfolio\\Portfolio.csproj|c:\\dev\\portfolio\\fabrice-guthier.github.io\\portfolio\\portfolio.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{3A326EED-2DBB-46C4-8524-478C6312FFC3}|Portfolio\\Portfolio.csproj|solutionrelative:portfolio\\portfolio.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A326EED-2DBB-46C4-8524-478C6312FFC3}|Portfolio\\Portfolio.csproj|c:\\dev\\portfolio\\fabrice-guthier.github.io\\portfolio\\wwwroot\\.nojekyll||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{3A326EED-2DBB-46C4-8524-478C6312FFC3}|Portfolio\\Portfolio.csproj|solutionrelative:portfolio\\wwwroot\\.nojekyll||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{3A326EED-2DBB-46C4-8524-478C6312FFC3}|Portfolio\\Portfolio.csproj|c:\\dev\\portfolio\\fabrice-guthier.github.io\\portfolio\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{3A326EED-2DBB-46C4-8524-478C6312FFC3}|Portfolio\\Portfolio.csproj|solutionrelative:portfolio\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3A326EED-2DBB-46C4-8524-478C6312FFC3}|Portfolio\\Portfolio.csproj|c:\\dev\\portfolio\\fabrice-guthier.github.io\\portfolio\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{3A326EED-2DBB-46C4-8524-478C6312FFC3}|Portfolio\\Portfolio.csproj|solutionrelative:portfolio\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3A326EED-2DBB-46C4-8524-478C6312FFC3}|Portfolio\\Portfolio.csproj|c:\\dev\\portfolio\\fabrice-guthier.github.io\\portfolio\\wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3A326EED-2DBB-46C4-8524-478C6312FFC3}|Portfolio\\Portfolio.csproj|solutionrelative:portfolio\\wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3A326EED-2DBB-46C4-8524-478C6312FFC3}|Portfolio\\Portfolio.csproj|c:\\dev\\portfolio\\fabrice-guthier.github.io\\portfolio\\wwwroot\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
@@ -62,7 +70,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -74,7 +82,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
+              "Title": "Portfolio",
+              "DocumentMoniker": "C:\\DEV\\Portfolio\\Fabrice-Guthier.github.io\\Portfolio\\Portfolio.csproj",
+              "RelativeDocumentMoniker": "Portfolio\\Portfolio.csproj",
+              "ToolTip": "C:\\DEV\\Portfolio\\Fabrice-Guthier.github.io\\Portfolio\\Portfolio.csproj",
+              "RelativeToolTip": "Portfolio\\Portfolio.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-11-26T14:49:16.109Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": ".nojekyll",
+              "DocumentMoniker": "C:\\DEV\\Portfolio\\Fabrice-Guthier.github.io\\Portfolio\\wwwroot\\.nojekyll",
+              "RelativeDocumentMoniker": "Portfolio\\wwwroot\\.nojekyll",
+              "ToolTip": "C:\\DEV\\Portfolio\\Fabrice-Guthier.github.io\\Portfolio\\wwwroot\\.nojekyll",
+              "RelativeToolTip": "Portfolio\\wwwroot\\.nojekyll",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-11-26T14:47:40.152Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "ProjectModal.razor",
               "DocumentMoniker": "C:\\DEV\\Portfolio\\Fabrice-Guthier.github.io\\Portfolio\\Components\\ProjectModal.razor",
               "RelativeDocumentMoniker": "Portfolio\\Components\\ProjectModal.razor",
@@ -86,7 +120,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "style.css",
               "DocumentMoniker": "C:\\DEV\\Portfolio\\Fabrice-Guthier.github.io\\Portfolio\\wwwroot\\css\\style.css",
               "RelativeDocumentMoniker": "Portfolio\\wwwroot\\css\\style.css",
@@ -98,19 +132,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "index.html",
               "DocumentMoniker": "C:\\DEV\\Portfolio\\Fabrice-Guthier.github.io\\Portfolio\\wwwroot\\index.html",
               "RelativeDocumentMoniker": "Portfolio\\wwwroot\\index.html",
-              "ToolTip": "C:\\DEV\\Portfolio\\Fabrice-Guthier.github.io\\Portfolio\\wwwroot\\index.html",
-              "RelativeToolTip": "Portfolio\\wwwroot\\index.html",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAHAAAAAAAAAA==",
+              "ToolTip": "C:\\DEV\\Portfolio\\Fabrice-Guthier.github.io\\Portfolio\\wwwroot\\index.html*",
+              "RelativeToolTip": "Portfolio\\wwwroot\\index.html*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-11-26T12:41:36.076Z"
+              "WhenOpened": "2025-11-26T12:41:36.076Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "MainLayout.razor",
               "DocumentMoniker": "C:\\DEV\\Portfolio\\Fabrice-Guthier.github.io\\Portfolio\\Layout\\MainLayout.razor",
               "RelativeDocumentMoniker": "Portfolio\\Layout\\MainLayout.razor",
@@ -123,7 +158,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "Home.razor",
               "DocumentMoniker": "C:\\DEV\\Portfolio\\Fabrice-Guthier.github.io\\Portfolio\\Pages\\Home.razor",
               "RelativeDocumentMoniker": "Portfolio\\Pages\\Home.razor",
@@ -135,7 +170,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "Skill.cs",
               "DocumentMoniker": "C:\\DEV\\Portfolio\\Fabrice-Guthier.github.io\\Portfolio\\Models\\Skill.cs",
               "RelativeDocumentMoniker": "Portfolio\\Models\\Skill.cs",
@@ -147,7 +182,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "ProjectCard.razor",
               "DocumentMoniker": "C:\\DEV\\Portfolio\\Fabrice-Guthier.github.io\\Portfolio\\Components\\ProjectCard.razor",
               "RelativeDocumentMoniker": "Portfolio\\Components\\ProjectCard.razor",
@@ -159,7 +194,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "Project.cs",
               "DocumentMoniker": "C:\\DEV\\Portfolio\\Fabrice-Guthier.github.io\\Portfolio\\Models\\Project.cs",
               "RelativeDocumentMoniker": "Portfolio\\Models\\Project.cs",
@@ -171,7 +206,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "Tags.cs",
               "DocumentMoniker": "C:\\DEV\\Portfolio\\Fabrice-Guthier.github.io\\Portfolio\\Enum\\Tags.cs",
               "RelativeDocumentMoniker": "Portfolio\\Enum\\Tags.cs",
@@ -183,7 +218,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "TagExtensions.cs",
               "DocumentMoniker": "C:\\DEV\\Portfolio\\Fabrice-Guthier.github.io\\Portfolio\\Extensions\\TagExtensions.cs",
               "RelativeDocumentMoniker": "Portfolio\\Extensions\\TagExtensions.cs",
@@ -195,7 +230,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "App.razor",
               "DocumentMoniker": "C:\\DEV\\Portfolio\\Fabrice-Guthier.github.io\\Portfolio\\App.razor",
               "RelativeDocumentMoniker": "Portfolio\\App.razor",
@@ -207,7 +242,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "_Imports.razor",
               "DocumentMoniker": "C:\\DEV\\Portfolio\\Fabrice-Guthier.github.io\\Portfolio\\_Imports.razor",
               "RelativeDocumentMoniker": "Portfolio\\_Imports.razor",
@@ -219,7 +254,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\DEV\\Portfolio\\Fabrice-Guthier.github.io\\Portfolio\\Program.cs",
               "RelativeDocumentMoniker": "Portfolio\\Program.cs",
