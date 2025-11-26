@@ -1,16 +1,15 @@
-/* Voici le CSS de mon portfolio */
+/* =========================================
+   PORTFOLIO STYLE - VERSION GOLD MASTER
+   ========================================= */
 
 * {
     box-sizing: border-box;
 }
 
 html {
-    font-size: 62.5%;
+    font-size: 62.5%; /* 1rem = 10px */
+    scroll-behavior: smooth; /* Défilement fluide pour les ancres */
 }
-
-/* Police du site ajoutée */
-
-/* Corps du site */
 
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -20,48 +19,33 @@ body {
     background: linear-gradient(to right, #dceeff, #ffffff);
 }
 
-/* les titres */
+/* --- TYPOGRAPHIE --- */
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    color: #000;
-    font-family: "PT sans";
+h1, h2, h3, h4, h5, h6 {
+    font-family: "PT Sans", sans-serif;
 }
 
-h1,
-.h1 {
+h1, .h1 {
     font-size: 3rem;
     font-weight: 700;
+    color: #000;
 }
 
-h2,
-.h2 {
+h2, .h2 {
     font-size: 2.5rem;
     text-transform: uppercase;
     color: #EEE;
     margin-bottom: 20px;
-    text-transform: uppercase;
-    /* Style en majuscule pour un effet professionnel */
     letter-spacing: 1px;
 }
 
-h3,
-.h3 {
-    grid-column: span 2;
-    /* Titre sur deux colonnes */
+h3, .h3 {
     font-size: 1.8em;
     color: #333;
     margin-bottom: 20px;
     text-transform: uppercase;
-    /* Style en majuscule pour un effet professionnel */
     letter-spacing: 1px;
 }
-
-/* les liens */
 
 a {
     text-decoration: none;
@@ -82,6 +66,8 @@ li {
     margin-bottom: 1rem;
 }
 
+/* --- LAYOUT & GRID --- */
+
 .container {
     padding: 1rem 2rem;
 }
@@ -90,13 +76,6 @@ li {
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
-
-.category {
-    margin: 0;
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    color: rgb(60, 0, 130);
 }
 
 .grid {
@@ -123,7 +102,7 @@ li {
     }
 }
 
-/* Sections */
+/* --- SECTIONS --- */
 
 section {
     padding: 5.5rem 0;
@@ -133,18 +112,14 @@ section {
     text-align: center;
 }
 
-@media screen and (max-width:1080px) {
-    nav {
-        position: fixed;
-    }
-}
-
 .section-title {
     margin-top: 0;
     color: #000;
     font-size: 3rem;
     text-transform: uppercase;
 }
+
+/* --- HEADER & NAVIGATION --- */
 
 .header {
     position: fixed;
@@ -155,16 +130,18 @@ section {
     background: linear-gradient(to right, #818f87, #536976, #292e49);
     border-bottom: 1px solid #EEE;
     color: #EEE;
+    height: 55px; /* On fixe la hauteur pour les calculs */
 }
 
 .header .logo {
     font-size: 2rem;
-    font-family: "PT sans";
+    font-family: "PT Sans", sans-serif;
     font-weight: 600;
     letter-spacing: 2px;
     color: #EEE;
 }
 
+/* Menu Desktop (caché par défaut, affiché via media query) */
 .navbar {
     display: none;
     color: #EEE;
@@ -178,13 +155,13 @@ section {
 }
 
 .header a {
-    /* color: #444; */
     color: #EEE;
+    transition: color 0.3s;
 }
 
-.header a:hover {
-    color: rgb(255, 123, 0)
-}
+    .header a:hover {
+        color: rgb(255, 123, 0);
+    }
 
 .header .topright {
     display: flex;
@@ -196,13 +173,11 @@ section {
     display: flex;
 }
 
-.socials a {
-    padding: 0 5px;
-}
+    .socials a {
+        padding: 0 5px;
+    }
 
-.socials .icon {
-    height: 16px;
-}
+/* --- BOUTON BURGER --- */
 
 .burger {
     background: none;
@@ -211,8 +186,13 @@ section {
     height: 35px;
     cursor: pointer;
     position: relative;
+    z-index: 10001; /* Très haut pour être au dessus du menu ouvrant */
+    pointer-events: auto;
     margin-left: 1rem;
     color: #EEE;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .burger .bar {
@@ -220,6 +200,9 @@ section {
     width: 22px;
     height: 3px;
     background-color: #EEE;
+    position: relative;
+    pointer-events: none;
+    transition: all .2s ease-out;
 }
 
 .burger .bar::before,
@@ -230,17 +213,37 @@ section {
     height: 3px;
     background-color: #EEE;
     position: absolute;
+    transition: all .2s ease-out;
+    left: 0;
 }
 
 .burger .bar::before {
-    transform: translateY(-6px);
+    transform: translateY(-8px);
 }
 
 .burger .bar::after {
-    transform: translateY(6px);
+    transform: translateY(8px);
 }
 
+/* --- MEDIA QUERY MOBILE (Le cœur du Patch Responsive) --- */
+
 @media screen and (max-width:1080px) {
+
+    /* 1. STABILISATION DU HEADER */
+    .header nav.container {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        flex-wrap: nowrap !important;
+        height: 100%;
+    }
+
+    /* 2. ON CACHE LES RÉSEAUX SOCIAUX SUR MOBILE (Ils écrasent le burger) */
+    .header .topright {
+        display: none !important;
+    }
+
+    /* 3. MENU DÉROULANT */
     .navbar {
         display: flex;
         justify-content: center;
@@ -248,48 +251,47 @@ section {
         flex-direction: column;
         position: fixed;
         top: 55px;
-        left: 110%;
-        width: 0;
+        left: 110%; /* Caché à droite */
+        width: 100%; /* FIX: largeur 100% mais décalé */
         overflow: hidden;
         opacity: 0;
-        height: calc(vh - 20px);
+        height: calc(100vh - 55px); /* FIX: Syntaxe Calc corrigée */
         background: linear-gradient(to right, #818f87, #536976, #292e49);
         transition: all .4s ease-out;
+        z-index: 9990;
     }
 
-    .navbar .menu li {
+    .navbar li {
         display: flex;
         justify-content: center;
+        width: 100%;
     }
 
-    .navbar .menu a {
+    .navbar a {
         display: block;
         font-size: 1.8rem;
         padding: 1.6rem;
         transition: all .4s;
         color: #FAFAFA;
+        width: 100%;
+        text-align: center;
     }
 
+    /* 4. ÉTAT OUVERT (Classe ajoutée par C#) */
     .show-nav .navbar {
         opacity: 1;
-        width: 100%;
-        left: 0;
-        z-index: 2;
+        left: 0; /* Apparition */
     }
 
     .show-nav .navbar li a:hover {
         transform: scale(1.1);
-        text-decoration: none;
-        color: rgb(255, 123, 0)
+        color: rgb(255, 123, 0);
     }
 
+    /* Animation Croix Burger */
     .show-nav .burger .bar {
         width: 0;
-    }
-
-    .burger .bar::before,
-    .burger .bar::after {
-        transition: all .2s ease-out;
+        background: transparent;
     }
 
     .show-nav .burger .bar::before {
@@ -303,13 +305,15 @@ section {
 
 @media screen and (min-width:1081px) {
     .navbar {
-        display: flex;
+        display: flex; /* Menu horizontal classique */
     }
 
     .burger {
-        display: none;
+        display: none; /* Pas de burger sur PC */
     }
 }
+
+/* --- HERO SECTION --- */
 
 .hero {
     padding: 8rem 0 0 0;
@@ -329,19 +333,7 @@ section {
 
 @media screen and (max-width:1080px) {
     .moi {
-        margin-left: 23%;
-    }
-}
-
-@media screen and (max-width:749px) {
-    .moi {
-        margin-left: 25%;
-    }
-}
-
-@media screen and (max-width:560px) {
-    .moi {
-        margin-left: 15%;
+        margin-left: 0; /* Centré proprement */
     }
 }
 
@@ -365,19 +357,14 @@ section {
     .hero .title {
         text-align: center;
         font-size: 6rem;
-        margin: 1rem 0 0 0%;
     }
 }
+
+/* --- SKILLS & ABOUT --- */
 
 .about .section-title {
     margin-top: 2.3rem;
     text-align: center;
-}
-
-@media screen and (min-width:749px) {
-    .about img {
-        padding-right: 3rem;
-    }
 }
 
 .skill__icon {
@@ -388,10 +375,6 @@ section {
     height: 75px;
     border: 2px solid #9b9b9b;
     border-radius: 50%;
-}
-
-.skill__icon svg {
-    height: 35px;
 }
 
 .skill__content {
@@ -423,96 +406,45 @@ section {
     }
 }
 
-.parcours h4,
-.parcours p {
-    margin: 0 0 0.4rem 0;
-}
+/* --- GRILLES COMPETENCES (Hard/Soft) --- */
 
-.parcours li {
-    background-color: #FAFAFA;
-    border-left: 3px solid rgba(60, 0, 130, 0.4);
-    padding: .9rem 1.8rem;
-    border-radius: 20%;
-}
-
-.parcours .progressbar {
-    color: #FFF;
-    text-shadow: 1px 1px 2px #000;
-    margin-bottom: 1rem;
-}
-
-.parcours .bar {
-    background: rgb(60, 0, 130);
-    padding: 1rem;
-    border-radius: 20%;
-}
-
-.grid__cv {
-    text-align: center;
-    align-items: center;
-    justify-self: center;
-}
-
-/* Conteneur principal */
-.soft__skills,
-.hard__skills {
+.soft__skills, .hard__skills {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* Centre horizontalement le contenu */
     margin: 20px auto;
     max-width: 800px;
-    /* Largeur maximale pour un meilleur rendu */
     padding: 10px;
     text-align: center;
 }
 
-/* Conteneur des éléments */
 .grid__skills {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    /* Deux colonnes */
     gap: 20px;
     width: 100%;
-    /* Prend toute la largeur disponible */
     margin-top: 20px;
 }
 
-/* Titre */
-.grid__skills h3 {
-    grid-column: span 3;
-    /* Titre sur trois colonnes */
-    font-size: 1.8em;
-    color: #333;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    /* Style en majuscule pour un effet professionnel */
-    letter-spacing: 1px;
-}
-
-/* Pour les écrans larges, on passe à 4 colonnes pour les skills pour gagner de la place */
+/* Sur grand écran : 4 colonnes */
 @media screen and (min-width: 1081px) {
     .grid__skills {
-        grid-template-columns: repeat(4, 1fr); /* 4 colonnes au lieu de 2 */
+        grid-template-columns: repeat(4, 1fr);
     }
 }
 
-/* Éléments individuels */
 .skills__item {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    /* Aligne les icônes et le texte à gauche */
     gap: 10px;
     font-size: 1em;
     font-weight: bold;
     color: #555;
 }
 
-/* Icônes */
 .skills__icon {
     width: 75px;
-    /* Taille fixe pour les icônes */
     height: 75px;
     display: flex;
     justify-content: center;
@@ -520,229 +452,251 @@ section {
     border-radius: 20%;
     overflow: hidden;
     background-color: #f8f8f8;
-    /* Couleur de fond douce */
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
-    /* Ombre subtile */
+    transition: transform 0.3s ease;
 }
 
-/* Images dans les icônes */
-.skills__icon img {
-    width: 100%;
-    /* Maintient les proportions de l'image */
-    height: 100%;
-    /* Ajuste l'image à la hauteur du conteneur */
-    object-fit: scale-down;
-    /* Empêche la distorsion tout en respectant les limites de l'icône */
-}
-
-/* Ajout d'une légère animation au survol */
 .skills__item:hover {
     color: #000;
-    /* Texte en noir au survol */
 }
 
 .skills__icon:hover {
     transform: scale(1.1);
-    /* Agrandit légèrement l'icône */
-    transition: 0.3s ease;
-    /* Transition fluide */
 }
 
-@media screen and (max-width:749px) {
-    .soft__skills {
-        text-align: center;
-    }
-
-    .hard__skills {
-        text-align: center;
-    }
-
-    .skills__icon {
-        margin: 0 auto;
-    }
-}
-
-@media screen and (min-width:750px) {
-    .soft__skills {
-        display: flex;
-        align-items: center;
-    }
-
-    .hard__skills {
-        display: flex;
-        align-items: center;
-    }
-
-    .skills__icon {
-        margin-right: 2rem;
-    }
-}
-
-.projets .grid__item {
-    max-width: 50%;
-    margin-bottom: 0;
-}
-
-.projets-filters .grid__item {
-    max-width: 50%;
-    margin-bottom: 0;
-}
+/* --- FILTRES PROJETS --- */
 
 .projets-filters p {
     color: #FAFAFA;
-    background: #FAFAFA;
-    background-color: rgb(60, 0, 130);
+    background: rgb(60, 0, 130);
     display: flex;
     flex: 1;
     justify-content: center;
     padding: 1rem;
     border: 1px solid rgba(60, 0, 130, 0.2);
+    cursor: pointer; /* Ajout curseur main */
 }
 
 .projets-filters p.active {
     color: #FFF;
-    background: rgb(60, 0, 130);
+    background: #3a0ca3; /* Légèrement plus foncé */
+    font-weight: bold;
+    border: 2px solid #FFF;
 }
 
 @media screen and (min-width:750px) {
-    .projets-filters .grid__item {
-        max-width: 25%;
-        margin-bottom: 0;
-    }
-
-    .projets .grid__item {
+    .projets-filters .grid__item, .projets .grid__item {
         max-width: 25%;
     }
 }
 
-@media screen and (max-width:749px) {
-    .projets .grid__item p {
-        font-size: 1.4rem;
+/* --- CARDS V2.0 (MODERNE) --- */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
-.card {
-    height: 416px;
-    background: #FFF;
+.project-card-wrapper {
+    animation: fadeInUp 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+    height: 100%;
+}
+
+.pro-card {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 350px;
+    cursor: pointer;
+}
+
+.pro-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.3);
+}
+
+.pro-card__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.pro-card:hover .pro-card__img {
+    transform: scale(1.1);
+}
+
+.pro-card__overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.6) 50%, rgba(0,0,0,0.1) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 2rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Desktop: Hover only */
+@media screen and (min-width: 1025px) {
+    .pro-card__overlay {
+        opacity: 0;
+    }
+
+    .pro-card:hover .pro-card__overlay {
+        opacity: 1;
+    }
+}
+
+/* Mobile: Toujours visible */
+@media screen and (max-width: 1024px) {
+    .pro-card__overlay {
+        opacity: 1;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 10%, rgba(0,0,0,0) 80%);
+    }
+}
+
+.pro-card__title {
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
     text-transform: uppercase;
-    text-align: center;
-    align-items: center;
-    border: 1px solid rgba(60, 0, 130, 0.2);
-    box-shadow: 0 0 7px rgba(60, 0, 130, 0.2);
+    font-family: 'PT Sans', sans-serif;
 }
 
-.card__inner {
+.pro-card__desc {
+    color: #ddd;
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.pro-card__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tech-badge {
+    font-size: 0.9rem;
+    padding: 4px 10px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    font-weight: 600;
+}
+
+/* --- MODALE (POPUP) --- */
+
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    z-index: 20000; /* Au-dessus de tout, même du burger */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+.modal-window {
+    background: #fff;
+    width: 95%;
+    max-width: 1200px; /* Largeur CINEMA */
+    max-height: 95vh;
+    border-radius: 12px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+    overflow-y: auto;
+    position: relative;
+    animation: slideUp 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-header-img {
+    width: 100%;
+    height: auto;
+    max-height: 60vh;
+    object-fit: contain; /* L'image entière est visible */
+    background-color: #1a1a1a;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.modal-content {
     padding: 2rem;
 }
 
-.card__title {
-    font-size: 1.5rem;
-}
-
-.footer a:hover {
-    color: rgb(255, 123, 0)
-}
-
-.cv-zoom {
-    padding: 5px;
-    padding-left: 20px;
-    text-align: center;
-}
-
-    .cv-zoom input[type=checkbox] {
-        display: none
-    }
-
-@media screen and (min-width:750px) {
-
-    .cv-zoom img:hover {
-        cursor: zoom-in
-    }
-
-    /* image zoom centré on click */
-    .cv-zoom img:active {
-        height: 90vh;
-        width: auto;
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        z-index: 9999;
-        transform: translate(-50%, -50%);
-    }
-    .cv-zoom img:active .hidden {
-        visibility: visible;
-        text-align: center;
-        opacity: 1;
-        color: #333;
-        text-transform: lowercase;
-    }
-}
-
-.card:hover {
-    cursor: zoom-in
-}
-
-/* image zoom centré on click */
-.card:active {
-    height: 95vh;
-    width: auto;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    z-index: 9999;
-    transform: translate(-50%, -50%);
-}
-
-.card:active .hidden {
-    display: flex;
-    text-align: center;
-    opacity: 1;
+.modal-title {
+    font-size: 2.5rem;
     color: #333;
-    text-transform: lowercase;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
 }
 
-
-/* texte caché quand l'image n'est pas cliquée*/
-.hidden {
-    display: none;
-    opacity: 0;
+.modal-desc {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 2rem;
 }
 
-/* footer */
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+    .close-btn:hover {
+        background: rgba(255, 0, 0, 0.8);
+    }
+
+/* --- FOOTER --- */
 
 footer {
-    border-top: 300px;
     background: linear-gradient(to right, #818f87, #536976, #292e49);
     border-bottom: 1px solid #EEE;
     color: #EEE;
     text-align: center;
     font-size: 1.4rem;
-}
-
-footer p {
-    margin: 0;
-}
-
-footer .grid {
-    align-items: center;
-    justify-content: center;
-}
-
-.footer__logo {
-    font-size: 2rem;
-    font-family: "PT sans";
-    font-weight: 600;
-    letter-spacing: 2px;
-    color: #EEE;
-}
-
-footer .socials {
-    justify-content: center;
-    text-align: center;
-}
-
-footer .socials li {
-    padding: 0.7rem;
+    padding: 2rem 0; /* Ajout padding vertical */
 }
 
 footer .socials a {
@@ -754,23 +708,10 @@ footer .socials a {
     height: 42px;
     display: flex;
     justify-content: center;
+    align-items: center; /* Ajout alignement */
     transition: all .5s;
 }
 
 footer .socials a:hover {
     background: rgb(255, 123, 0);
-}
-
-@media screen and (min-width:750px) {
-    footer {
-        text-align: center;
-    }
-
-    footer .grid__item {
-        max-width: 33.333%;
-    }
-}
-
-span.motsgras {
-    font-weight: bold;
 }

@@ -1,0 +1,56 @@
+﻿@using Portfolio.Models
+
+@if (Project != null)
+{
+    <div class="modal-backdrop" @onclick="OnClose">
+        <div class="modal-window" @onclick:stopPropagation>
+
+            <button class="close-btn" @onclick="OnClose">
+                <i class="fas fa-times"></i>
+            </button>
+
+            <img src="@(string.IsNullOrEmpty(Project.ImageUrl) ? "img/default-project.jpg" : Project.ImageUrl)"
+                 class="modal-header-img"
+                 alt="@Project.Title" />
+
+            <div class="modal-content">
+                <h2 class="modal-title">@Project.Title</h2>
+
+                <div class="pro-card__tags" style="margin-bottom: 20px;">
+                    @foreach (var tag in Project.Tags)
+                    {
+                        <span class="tech-badge" style="background:#333; color:#fff;">@GetTagName(tag)</span>
+                    }
+                </div>
+
+                <p class="modal-desc">@Project.Description</p>
+
+                @if (!string.IsNullOrEmpty(Project.LinkUrl))
+                {
+                    <a href="@Project.LinkUrl" target="_blank" class="btn-primary" style="padding: 10px 20px; background: #0078d4; color: white; border-radius: 5px; text-decoration: none;">
+                        <i class="fas fa-external-link-alt"></i> Voir le projet / Code
+                    </a>
+                }
+            </div>
+        </div>
+    </div>
+}
+
+@code {
+    [Parameter]
+    public Project? Project { get; set; }
+
+    [Parameter]
+    public EventCallback OnClose { get; set; }
+
+    // Helper pour les tags (copié/collé, idéalement à mettre dans une classe statique partagée)
+    private string GetTagName(TechTag tag) => tag switch
+    {
+        TechTag.CSharp => "C#",
+        TechTag.DotNet => ".NET",
+        TechTag.HtmlCss => "HTML/CSS",
+        TechTag.Sql => "SQL",
+        TechTag.SignalR => "SignalR",
+        _ => tag.ToString()
+    };
+}

@@ -8,10 +8,10 @@
     <div class="container">
         <div class="d-flex grid">
             <div class="grid__item hero__item moi">
-                <img src="img/profil.jpg" alt="Fabrice Guthier" style="border-radius: 50%; width: 250px; border: 5px solid rgba(255,255,255,0.2);" />
+                <img src="img/moi.jpg" alt="Fabrice Guthier" style="border-radius: 50%; width: 250px; border: 5px solid rgba(255,255,255,0.2);" />
             </div>
             <div class="grid__item hero__item">
-                <h2>Développeur .NET / Blazor</h2>
+                <h2>Concepteur Développeur d'Applications</h2>
                 <h1 class="title">Bonjour, je suis Fabrice GUTHIER</h1>
                 <p>Passionné par l'informatique, le Hardware et le code propre.</p>
             </div>
@@ -19,7 +19,7 @@
     </div>
 </section>
 
-<section id="compétences" class="about">
+<section id="competences" class="about">
     <div class="container">
         <div class="section-header">
             <h2 class="section-title">MES COMPÉTENCES</h2>
@@ -52,6 +52,7 @@
 
 <section id="parcours">
     <div class="container">
+
         <div class="section-header" style="margin-top: 4rem;">
             <h2 class="section-title">LANGAGES & FRAMEWORKS</h2>
         </div>
@@ -72,7 +73,6 @@
         <div class="section-header" style="margin-top: 4rem;">
             <h2 class="section-title">LOGICIELS MAÎTRISÉS</h2>
         </div>
-
         <div class="hard__skills">
             <div class="grid__skills">
                 @foreach (var skill in Softwares)
@@ -90,7 +90,6 @@
         <div class="section-header">
             <h2 class="section-title">SOFT SKILLS</h2>
         </div>
-
         <div class="soft__skills">
             <div class="grid__skills">
                 @foreach (var skill in SoftSkills)
@@ -108,7 +107,6 @@
         <div class="section-header" style="margin-top: 4rem;">
             <h2 class="section-title">HARD SKILLS</h2>
         </div>
-
         <div class="hard__skills">
             <div class="grid__skills">
                 @foreach (var skill in HardSkills)
@@ -131,31 +129,22 @@
             <h2 class="section-title">MES PROJETS</h2>
         </div>
 
-        <div class="grid projets-filters">
-            <div class="grid__item">
-                <p class="active">TOUS</p>
-            </div>
-            <div class="grid__item">
-                <p>IT / DEV</p>
-            </div>
-            <div class="grid__item">
-                <p>HARDWARE</p>
-            </div>
-        </div>
-
         <div class="grid">
             @foreach (var project in Projects)
             {
                 <div class="grid__item">
-                    <ProjectCard Item="@project" />
+                    <ProjectCard Item="@project" OnClick="OpenModal" />
                 </div>
             }
         </div>
     </div>
 </section>
 
+<ProjectModal Project="@SelectedProject" OnClose="CloseModal" />
+
+
 @code {
-    // --- DATA MODELS (Local pour l'instant, à bouger dans Models plus tard si besoin) ---
+    // --- MODELES LOCAUX ---
     public class ServiceItem
     {
         public string Title { get; set; } = string.Empty;
@@ -169,27 +158,15 @@
         public string IconClass { get; set; } = string.Empty;
     }
 
-    // --- DATA INITIALIZATION ---
+    // --- DATA ---
 
-    // Liste des services (Zone 2)
     private List<ServiceItem> Services = new()
     {
-        new ServiceItem
-        {
-            Title = "CONCEPTEUR DÉVELOPPEUR D'APPLICATIONS",
-            IconClass = "fas fa-keyboard",
-            Details = new() { "AGILE/SCRUM", "DotNet/SQL", "GIT/Docker" }
-        },
-        new ServiceItem
-        {
-            Title = "CONSULTANT HARDWARE PC",
-            IconClass = "fas fa-shopping-cart",
-            Details = new() { "Conseil configuration", "Montage PC", "Optimisation" }
-        },
-        // Ajoute les autres ici...
+        new ServiceItem { Title = "CONCEPTEUR DÉVELOPPEUR", IconClass = "fas fa-keyboard", Details = new() { "AGILE/SCRUM", "DotNet/SQL", "GIT/Docker" } },
+        new ServiceItem { Title = "CONSULTANT HARDWARE PC", IconClass = "fas fa-shopping-cart", Details = new() { "Conseil config", "Montage PC", "Optimisation" } }
     };
 
-    // Liste des Langages et Frameworks
+    // Note : J'ai remonté le point-virgule pour éviter le bug du parser Razor
     private List<Skill> Languages = new()
     {
         new Skill { Name = "C#", IconClass = "fas fa-code" },
@@ -200,21 +177,18 @@
         new Skill { Name = "Python", IconClass = "fab fa-python" },
         new Skill { Name = "JavaScript", IconClass = "fab fa-js" },
         new Skill { Name = "PHP", IconClass = "fab fa-php" }
-    }
-    ;
+    };
 
-    // Liste des Logiciels maîtrisés
     private List<Skill> Softwares = new()
     {
-        new Skill { Name = "Visual Studio", IconClass = "fab fa-microsoft" }, // Faute d'icone VS exacte en free, on improvise
-        new Skill { Name = "Visual Studio Code", IconClass = "fas fa-code" },
+        new Skill { Name = "Visual Studio", IconClass = "fab fa-microsoft" },
+        new Skill { Name = "VS Code", IconClass = "fas fa-code" },
         new Skill { Name = "Docker", IconClass = "fab fa-docker" },
         new Skill { Name = "Git", IconClass = "fab fa-git-alt" },
         new Skill { Name = "Postman", IconClass = "fas fa-vial" },
         new Skill { Name = "Figma", IconClass = "fas fa-pencil-ruler" }
     };
 
-    // Liste des Soft Skills
     private List<Skill> SoftSkills = new()
     {
         new Skill { Name = "Curiosité", IconClass = "fas fa-brain" },
@@ -222,48 +196,52 @@
         new Skill { Name = "Adaptabilité", IconClass = "fas fa-sync-alt" },
         new Skill { Name = "Travail en équipe", IconClass = "fas fa-users" },
         new Skill { Name = "Patience", IconClass = "fas fa-hourglass-half" }
-    }
-    ;
+    };
 
-    // Liste des Hard Skills
     private List<Skill> HardSkills = new()
     {
         new Skill { Name = "Algorithmie", IconClass = "fas fa-cogs" },
-        new Skill { Name = "Architecture logicielle", IconClass = "fas fa-project-diagram" },
+        new Skill { Name = "Architecture", IconClass = "fas fa-project-diagram" },
         new Skill { Name = "Gestion de projet", IconClass = "fas fa-tasks" },
-        new Skill { Name = "Tests et débogage", IconClass = "fas fa-bug" },
-        new Skill { Name = "Sécurité informatique", IconClass = "fas fa-shield-alt" },
-        new Skill { Name = "Résolution de problèmes", IconClass = "fas fa-lightbulb" },
+        new Skill { Name = "Debug", IconClass = "fas fa-bug" },
+        new Skill { Name = "Sécurité", IconClass = "fas fa-shield-alt" },
         new Skill { Name = "Montage PC", IconClass = "fas fa-desktop" }
-    }
-    ;
+    };
 
-    // Liste des Projets (Simulation)
     private List<Project> Projects = new();
 
     protected override void OnInitialized()
     {
-        // Mock data pour les projets pour tester l'affichage
         Projects = new List<Project>
         {
             new Project
             {
-                Title = "Portfolio Blazor",
-                Description = "Migration complète du portfolio HTML vers Blazor WASM (.NET 8). Architecture composants.",
-                Tags = new() { TechTag.Blazor, TechTag.CSharp, TechTag.DotNet, TechTag.HtmlCss }
+                Title = "Messagerie instantanée",
+                Description = "Application web de messagerie instantanée souveraine.",
+                ImageUrl = "img/messagerie.png",
+                Tags = new() { TechTag.DotNet, TechTag.CSharp, TechTag.Sql, TechTag.SignalR }
             },
             new Project
             {
-                Title = "Messagerie instantanée",
-                Description = "Application web de messagerie instantanée pouvant être hébergée localement pour gérer la souveraineté des données.",
-                Tags = new() { TechTag.DotNet, TechTag.CSharp, TechTag.Sql, TechTag.SignalR }
-            },
-             new Project
-            {
-                Title = "Application mobile de tourisme ludique",
-                Description = "Application mobile en Flutter, qui utilise Google Maps pour créer des points d'intêrets et des quiz liés pour rendre le tourisme ludique et communautaire. Le tout grâce à une API REST en DotNet.",
-                Tags = new() { TechTag.DotNet, TechTag.Flutter, TechTag.SignalR, TechTag.API,  }
+                Title = "Tourisme Ludique",
+                Description = "Application mobile Flutter + API .NET.",
+                ImageUrl = "img/yoovisit.png",
+                Tags = new() { TechTag.DotNet, TechTag.Flutter, TechTag.SignalR, TechTag.API }
             }
         };
+    }
+
+    // --- LOGIQUE MODALE ---
+    private Project? SelectedProject;
+
+    private void OpenModal(Project project)
+    {
+        SelectedProject = project;
+        StateHasChanged(); // Force le rendu UI pour être sûr
+    }
+
+    private void CloseModal()
+    {
+        SelectedProject = null;
     }
 }

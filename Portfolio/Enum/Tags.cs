@@ -5,7 +5,6 @@ public enum TechTag
     CSharp,
     DotNet,
     Blazor,
-    Wpf,
     Sql,
     Python,
     HtmlCss,

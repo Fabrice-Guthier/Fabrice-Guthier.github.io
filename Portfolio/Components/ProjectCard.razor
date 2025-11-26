@@ -1,24 +1,47 @@
 ﻿@using Portfolio.Models
 
-<div class="card">
-    <img src="@Item.ImageUrl" class="card__image" alt="@Item.Title">
+<div class="project-card-wrapper" @onclick="HandleClick">
+    <div class="pro-card">
+        <img src="@(string.IsNullOrEmpty(Item.ImageUrl) ? "img/default-project.jpg" : Item.ImageUrl)"
+             alt="@Item.Title"
+             class="pro-card__img" />
 
-    <div class="card__inner">
-        <h3 class="card__title">@Item.Title</h3>
-        <p class="category">
-            @Item.Category
-            @(!string.IsNullOrEmpty(Item.SubTitle) ? $" - {Item.SubTitle}" : "")
-        </p>
+        <div class="pro-card__overlay">
+            <h3 class="pro-card__title">@Item.Title <i class="fas fa-expand" style="font-size: 0.7em; margin-left: 5px; opacity: 0.7;"></i></h3>
+            <p class="pro-card__desc">@Item.Description</p>
 
-        <p class="hidden">
-            @Item.Description
-        </p>
+            <div class="pro-card__tags">
+                @foreach (var tag in Item.Tags)
+                {
+                    <span class="tech-badge">@GetTagName(tag)</span>
+                }
+            </div>
+        </div>
     </div>
-
-    <div class="card__overlay"></div>
 </div>
 
 @code {
     [Parameter]
-    public Project Item { get; set; } = new Project();
+    public Project Item { get; set; } = new();
+
+    // EventCallback permet de prévenir le parent (Home.razor)
+    [Parameter]
+    public EventCallback<Project> OnClick { get; set; }
+
+    private async Task HandleClick()
+    {
+        // On déclenche l'événement vers le parent
+        await OnClick.InvokeAsync(Item);
+    }
+
+    private string GetTagName(TechTag tag) => tag switch
+    {
+        TechTag.CSharp => "C#",
+        TechTag.DotNet => ".NET",
+        TechTag.HtmlCss => "HTML/CSS",
+        TechTag.Sql => "SQL",
+        TechTag.SignalR => "SignalR",
+        TechTag.Flutter => "Flutter",
+        _ => tag.ToString()
+    };
 }

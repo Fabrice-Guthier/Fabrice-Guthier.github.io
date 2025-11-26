@@ -1,20 +1,23 @@
 ﻿@inherits LayoutComponentBase
 
 <div class="page">
+    <div style="position: fixed; top: 0; left: 0; z-index: 20000; background: red; color: white; padding: 5px;">
+        État du Menu : @IsNavOpen
+    </div>
     <header class="header">
-        <nav class="d-flex container">
+        <nav class="d-flex container @(IsNavOpen ? "show-nav" : "")">
             <div class="logo">Fabrice GUTHIER</div>
             
-            <button class="burger" aria-label="Menu">
+            <button class="burger" aria-label="Menu" @onclick="ToggleNav">
                 <span class="bar"></span>
             </button>
 
             <ul class="navbar list-unstyled">
-                <li><a href="#accueil">Accueil</a></li>
-                <li><a href="#compétences">Compétences</a></li>
-                <li><a href="#parcours">Parcours</a></li>
-                <li><a href="#projets">Projets</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#accueil" @onclick="CloseNav">Accueil</a></li>
+                <li><a href="#competences" @onclick="CloseNav">Compétences</a></li>
+                <li><a href="#parcours" @onclick="CloseNav">Parcours</a></li>
+                <li><a href="#projets" @onclick="CloseNav">Projets</a></li>
+                <li><a href="#contact" @onclick="CloseNav">Contact</a></li>
             </ul>
 
             <div class="topright">
@@ -50,15 +53,17 @@
 </div>
 
 @code {
-    private bool IsNavOpen { get; set; } = false;
+    private bool IsNavOpen = false;
 
     private void ToggleNav()
     {
         IsNavOpen = !IsNavOpen;
+        StateHasChanged();
     }
 
     private void CloseNav()
     {
         IsNavOpen = false;
+        StateHasChanged();
     }
 }
