@@ -1,0 +1,45 @@
+name: Deploy to GitHub Pages
+
+# Trigger : On lance le script à chaque push sur la branche main (ou master)
+on:
+  push:
+    branches: [ main, master ]
+
+permissions:
+  contents: write
+
+jobs:
+  deploy-to-github-pages:
+    # On utilise une machine virtuelle Ubuntu (Linux)
+    runs-on: ubuntu-latest
+    
+    steps:
+    # 1. On récupère le code (Checkout)
+    - uses: actions/checkout@v4
+
+    # 2. On installe .NET 9
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: 9.0.x
+
+    # 3. On publie l'application (Build + Output)
+    # Remplace 'Portfolio.csproj' par le nom exact de ton fichier projet si différent
+    - name: Publish .NET Project
+      run: dotnet publish Portfolio/Portfolio.csproj -c Release -o release --nologo
+
+    # 4. Hack : Copie de index.html vers 404.html automatiquement
+    # (Si tu ne l'as pas fait manuellement à l'étape 1, ça le fera ici)
+    - name: Create 404.html for SPA routing
+      run: cp release/wwwroot/index.html release/wwwroot/404.html
+
+    # 5. Hack : Création du .nojekyll automatiquement
+    - name: Add .nojekyll file
+      run: touch release/wwwroot/.nojekyll
+
+    # 6. Déploiement sur la branche 'gh-pages'
+    - name: Deploy to GitHub Pages
+      uses: JamesIves/github-pages-deploy-action@v4
+      with:
+        folder: release/wwwroot # Le dossier qu'on vient de générer
+        branch: gh-pages # La branche "technique" où le site sera hébergé
