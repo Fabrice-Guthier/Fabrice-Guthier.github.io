@@ -1,0 +1,64 @@
+﻿@inherits LayoutComponentBase
+
+<div class="page">
+    <header class="header">
+        <nav class="d-flex container">
+            <div class="logo">Fabrice GUTHIER</div>
+            
+            <button class="burger" aria-label="Menu">
+                <span class="bar"></span>
+            </button>
+
+            <ul class="navbar list-unstyled">
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#compétences">Compétences</a></li>
+                <li><a href="#parcours">Parcours</a></li>
+                <li><a href="#projets">Projets</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <div class="topright">
+                <div class="socials">
+                    <a href="#" class="icon"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/Fabrice-Guthier" class="icon"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        @Body
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="grid">
+                <div class="grid__item">
+                    <p class="footer__logo">Fabrice GUTHIER</p>
+                    <p>&copy; 2025 - Tous droits réservés</p>
+                </div>
+                <div class="grid__item">
+                    <ul class="socials list-unstyled d-flex">
+                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+
+@code {
+    private bool IsNavOpen { get; set; } = false;
+
+    private void ToggleNav()
+    {
+        IsNavOpen = !IsNavOpen;
+    }
+
+    private void CloseNav()
+    {
+        IsNavOpen = false;
+    }
+}

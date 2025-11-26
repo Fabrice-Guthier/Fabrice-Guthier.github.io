@@ -1,0 +1,24 @@
+﻿@using Portfolio.Models
+
+<div class="card">
+    <img src="@Item.ImageUrl" class="card__image" alt="@Item.Title">
+
+    <div class="card__inner">
+        <h3 class="card__title">@Item.Title</h3>
+        <p class="category">
+            @Item.Category
+            @(!string.IsNullOrEmpty(Item.SubTitle) ? $" - {Item.SubTitle}" : "")
+        </p>
+
+        <p class="hidden">
+            @Item.Description
+        </p>
+    </div>
+
+    <div class="card__overlay"></div>
+</div>
+
+@code {
+    [Parameter]
+    public Project Item { get; set; } = new Project();
+}
