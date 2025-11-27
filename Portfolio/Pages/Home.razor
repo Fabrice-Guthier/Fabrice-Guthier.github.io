@@ -162,8 +162,8 @@
 
     private List<ServiceItem> Services = new()
     {
-        new ServiceItem { Title = "CONCEPTEUR DÉVELOPPEUR", IconClass = "fas fa-keyboard", Details = new() { "AGILE/SCRUM", "DotNet/SQL", "GIT/Docker" } },
-        new ServiceItem { Title = "CONSULTANT HARDWARE PC", IconClass = "fas fa-shopping-cart", Details = new() { "Conseil config", "Montage PC", "Optimisation" } }
+        new ServiceItem { Title = "CONCEPTEUR DÉVELOPPEUR D'APPLICATIONS", IconClass = "fas fa-keyboard", Details = new() { "AGILE/SCRUM", "DotNet/SQL", "Flutter/Dart", "GIT/Docker" } },
+        new ServiceItem { Title = "CONSULTANT HARDWARE PC", IconClass = "fas fa-shopping-cart", Details = new() { "Conseil config", "Montage PC", "Optimisation", "Entretien" } }
     };
 
     // Note : J'ai remonté le point-virgule pour éviter le bug du parser Razor
@@ -217,16 +217,29 @@
             new Project
             {
                 Title = "Messagerie instantanée",
-                Description = "Application web de messagerie instantanée souveraine.",
-                ImageUrl = "img/messagerie.png",
-                Tags = new() { TechTag.DotNet, TechTag.CSharp, TechTag.Sql, TechTag.SignalR }
+                Description = "Application web de messagerie instantanée, dans laquelle la conversation se fait sans délais grâce à SignalR et ses websockets. Le principal avantage de cette application est l'émancipation des géants du numérique, et ainsi de conserver la souveraineté des données.",
+                ImageUrl = "img/MnsMessengerChat.png",
+                Tags = new() { TechTag.DotNet, TechTag.CSharp, TechTag.Sql, TechTag.SignalR },
+                Gallery = new()
+                {
+                    "img/MnsMessengerLogin.png",
+                    "img/MnsMessengerChat.png",
+                    "img/MnsMessengerSettings.png",
+                    "img/MnsMessengerBackOffice.png",
+                    "img/MnsMessengerCrud.png",
+                    "img/MnsMeessengerAccounts.png"
+                }
             },
             new Project
             {
                 Title = "Tourisme Ludique",
-                Description = "Application mobile Flutter + API .NET.",
+                Description = "Application mobile permettant de rendre le tourisme ludique et interactif. Grâce à cette application communautaire, vous pourrez créer des points d'intêret, leur associer des quiz, des photos, des informations. Vous pourrez aussi répondre aux quiz des autres utilisateurs, noter leurs points d'intêret, ce qui vous permettra de gagner des points d'expérience pour monter en niveau, et ainsi pouvoir accéder à d'autres niveaux de quiz.",
                 ImageUrl = "img/yoovisit.png",
-                Tags = new() { TechTag.DotNet, TechTag.Flutter, TechTag.SignalR, TechTag.API }
+                Tags = new() { TechTag.DotNet, TechTag.Flutter, TechTag.SignalR, TechTag.API },
+                Gallery = new()
+                {
+                    "img/yoovisit.png"
+                }
             }
         };
     }

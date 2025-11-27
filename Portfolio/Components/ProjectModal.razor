@@ -2,36 +2,50 @@
 
 @if (Project != null)
 {
-    <div class="modal-backdrop" @onclick="OnClose">
-        <div class="modal-window" @onclick:stopPropagation>
+    <div class="modal-backdrop" @onclick="HandleBackdropClick">
+        <div class="modal-window" @onclick:stopPropagation="true">
 
-            <button class="close-btn" @onclick="OnClose">
+            <button class="close-btn" @onclick="HandleClose">
                 <i class="fas fa-times"></i>
             </button>
 
-            <img src="@(string.IsNullOrEmpty(Project.ImageUrl) ? "img/default-project.jpg" : Project.ImageUrl)"
-                 class="modal-header-img"
-                 alt="@Project.Title" />
+            <div class="carousel-container">
+                @if (HasGallery)
+                {
+                    <button class="nav-btn prev" @onclick="PreviousImage">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                }
+
+                <img src="@CurrentImage" alt="@Project.Title" class="modal-header-img" />
+
+                @if (HasGallery)
+                {
+                    <button class="nav-btn next" @onclick="NextImage">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+
+                    <div class="carousel-counter">
+                        @(CurrentIndex + 1) / @Project.Gallery.Count
+                    </div>
+                }
+            </div>
 
             <div class="modal-content">
                 <h2 class="modal-title">@Project.Title</h2>
 
-                <div class="pro-card__tags" style="margin-bottom: 20px;">
-                    @foreach (var tag in Project.Tags)
+                <div class="pro-card__tags mb-3" style="margin-bottom: 1rem;">
+                    @foreach (TechTag tag in Project.Tags)
                     {
-                        <span class="tech-badge" style="background:#333; color:#fff;">@GetTagName(tag)</span>
+                        <span class="tech-badge" style="color:#333; border: 1px solid #ccc; background: #eee;">
+                            @tag
+                        </span>
                     }
                 </div>
 
                 <p class="modal-desc">@Project.Description</p>
-
-                @if (!string.IsNullOrEmpty(Project.LinkUrl))
-                {
-                    <a href="@Project.LinkUrl" target="_blank" class="btn-primary" style="padding: 10px 20px; background: #0078d4; color: white; border-radius: 5px; text-decoration: none;">
-                        <i class="fas fa-external-link-alt"></i> Voir le projet / Code
-                    </a>
-                }
             </div>
+
         </div>
     </div>
 }
@@ -53,4 +67,65 @@
         TechTag.SignalR => "SignalR",
         _ => tag.ToString()
     };
+
+    private int CurrentIndex { get; set; } = 0;
+
+    // Computed Property pour savoir si on a une galerie valide
+    private bool HasGallery => Project != null && Project.Gallery != null && Project.Gallery.Count > 1;
+
+    // Récupère l'image courante ou fallback sur la cover
+    private string CurrentImage
+    {
+        get
+        {
+            if (Project == null) return string.Empty;
+            if (Project.Gallery != null && Project.Gallery.Count > 0)
+            {
+                return Project.Gallery[CurrentIndex];
+            }
+            return Project.ImageUrl; // Fallback
+        }
+    }
+
+    // Reset l'index à 0 à chaque ouverture d'un nouveau projet
+    protected override void OnParametersSet()
+    {
+        CurrentIndex = 0;
+    }
+
+    private void NextImage()
+    {
+        if (!HasGallery) return;
+        if (CurrentIndex < Project!.Gallery.Count - 1)
+        {
+            CurrentIndex++;
+        }
+        else
+        {
+            CurrentIndex = 0; // Loop retour au début
+        }
+    }
+
+    private void PreviousImage()
+    {
+        if (!HasGallery) return;
+        if (CurrentIndex > 0)
+        {
+            CurrentIndex--;
+        }
+        else
+        {
+            CurrentIndex = Project!.Gallery.Count - 1; // Loop vers la fin
+        }
+    }
+
+    private async Task HandleClose()
+    {
+        await OnClose.InvokeAsync();
+    }
+
+    private async Task HandleBackdropClick()
+    {
+        await OnClose.InvokeAsync();
+    }
 }

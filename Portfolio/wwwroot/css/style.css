@@ -518,6 +518,9 @@ section {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     height: 350px;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .pro-card:hover {
@@ -529,6 +532,7 @@ section {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center;
     transition: transform 0.5s ease;
 }
 
@@ -615,7 +619,7 @@ section {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.85);
+    background-color: rgba(0, 0, 0, 0.30);
     z-index: 20000; /* Au-dessus de tout, même du burger */
     display: flex;
     justify-content: center;
@@ -625,7 +629,7 @@ section {
 }
 
 .modal-window {
-    background: #fff;
+    background: linear-gradient(to right, #dceeff, #ffffff);
     width: 95%;
     max-width: 1200px; /* Largeur CINEMA */
     max-height: 95vh;
@@ -643,7 +647,6 @@ section {
     height: auto;
     max-height: 60vh;
     object-fit: contain; /* L'image entière est visible */
-    background-color: #1a1a1a;
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
 }
@@ -684,9 +687,9 @@ section {
     justify-content: center;
 }
 
-    .close-btn:hover {
-        background: rgba(255, 0, 0, 0.8);
-    }
+.close-btn:hover {
+    background: rgba(255, 0, 0, 0.8);
+}
 
 /* --- FOOTER --- */
 
@@ -714,4 +717,74 @@ footer .socials a {
 
 footer .socials a:hover {
     background: rgb(255, 123, 0);
+}
+
+/* --- CAROUSEL MODALE --- */
+
+.carousel-container {
+    position: relative;
+    background-color: #1a1a1a;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    overflow: hidden; /* Important pour ne pas que l'image dépasse */
+}
+
+/* Surcharge de l'image modale existante */
+.modal-header-img {
+    max-height: 60vh;
+    width: auto; /* Laisse le ratio naturel */
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.nav-btn:active {
+    transform: translateY(-50%) scale(0.95);
+}
+
+.prev {
+    left: 20px;
+}
+
+.next {
+    right: 20px;
+}
+
+.carousel-counter {
+    position: absolute;
+    bottom: 15px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
 }
