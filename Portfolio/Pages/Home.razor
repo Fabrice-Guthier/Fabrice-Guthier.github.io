@@ -10,9 +10,10 @@
             <div class="grid__item hero__item moi">
                 <img src="img/moi.jpg" alt="Fabrice Guthier" style="border-radius: 50%; width: 250px; border: 5px solid rgba(255,255,255,0.2);" />
             </div>
-            <div class="grid__item hero__item">
-                <h2>Concepteur Développeur d'Applications</h2>
-                <h1 class="title">Bonjour, je suis Fabrice GUTHIER</h1>
+            <div class="grid__item hero__item">                
+                <h1 class="title">Bonjour, je suis </h1>
+                <h1 class="title">Fabrice GUTHIER</h1>
+                <h2>Je suis Concepteur Développeur d'Applications</h2>
                 <p>Passionné par l'informatique, le Hardware et le clean code.</p>
                 <p>Là où d'autres voient des problèmes, <b>je vois des solutions</b></p>
             </div>
@@ -24,10 +25,10 @@
     <div class="container">
         <div class="section-header">
             <h2 class="section-title">À PROPOS DE MOI</h2>
-            <p>Fort d'une passion pour le monde de l'informatique depuis mes 6 ans, j'ai été diplôlmé d'un Bac+2 en 2003, après une formation d'un an à l'AFPA en Technicien Supérieur en Informatique de Gestion, relation client/serveur Visual Basic pour le langage et Oracle pour la partie SGBDR.'</p>
-            <p>S'en est suivi une carrière de 16 ans dans les Telecoms français, dans laquelle ma capacité d'analyse et de résolution de problèmes a été affutée jour après jour.</p>
+            <p>Fort d'une passion pour le monde de l'informatique depuis mes 6 ans, j'ai été diplôlmé d'un Bac+2 en 2003, après une formation d'un an à l'AFPA en Technicien Supérieur en Informatique de Gestion, relation client/serveur <b>Visual Basic</b> pour le langage et <b>Oracle</b> pour la partie SGBDR.'</p>
+            <p>S'en est suivi une carrière de 16 ans dans les Telecoms français, dans laquelle ma <b>capacité d'analyse</b> et de <b>résolution de problèmes</b> a été affutée jour après jour.</p>
             <p>Suite à un accident de travail qui m'a laissé des séquelles lourdes sur mon pied droit, j'ai décidé de revenir à ma passion principale : <b>le monde de l'informatique</b> !</p>
-            <p>J'ai donc suivi un nouveau cursus qui m'a permis de me remettre à jour au niveau langage mais aussi pour tout ce qui concerne les méthodes CI/CD, Frameworks, Docker, hébergement web.</p>
+            <p>J'ai donc suivi un nouveau cursus qui m'a permis de me remettre à jour au niveau langage mais aussi pour tout ce qui concerne les méthodes <b>CI/CD, Frameworks, Docker, hébergement web</b>.</p>
             <p>Suite à cette formation d'un an, j'ai été diplômé d'un Bac+3 en Conception Développement d'Applications.</p>
         </div>
     </div>
@@ -36,14 +37,14 @@
 <section>
     <div class="container">
         <div class="section-header">
-            <h2 class ="section-title">MES EXPÉRIENCES</h2>
+            <h1 class="section-title">Mes expériences</h1>
         </div>
         <div class="grid">
             @foreach (var service in Services)
             {
                 <div class="grid__item">
                     <div class="skill">
-                        <div class="skill__icon">
+                        <div class="skills__icon" style="border-color: #0078d4;">
                             <i class="@service.IconClass fa-2x" style="color: #333;"></i>
                         </div>
                         <div class="skill__content">
@@ -63,6 +64,10 @@
 </section>
 
 <section id="parcours">
+    <div class="section-header">
+        <h1 class="section-title">Mes compétences</h1>
+    </div>
+
     <div class="container">
 
         <div class="section-header" style="margin-top: 1rem;">
@@ -99,12 +104,12 @@
             </div>
         </div>
 
-        <div class="section-header">
-            <h2 class="section-title">SOFT SKILLS</h2>
+        <div class="section-header" style="margin-top: 4rem;">
+            <h2 class="section-title">HARD SKILLS</h2>
         </div>
-        <div class="soft__skills">
+        <div class="hard__skills">
             <div class="grid__skills">
-                @foreach (var skill in SoftSkills)
+                @foreach (var skill in HardSkills)
                 {
                     <div class="skills__item">
                         <div class="skills__icon">
@@ -116,12 +121,12 @@
             </div>
         </div>
 
-        <div class="section-header" style="margin-top: 4rem;">
-            <h2 class="section-title">HARD SKILLS</h2>
+        <div class="section-header">
+            <h2 class="section-title">SOFT SKILLS</h2>
         </div>
-        <div class="hard__skills">
+        <div class="soft__skills">
             <div class="grid__skills">
-                @foreach (var skill in HardSkills)
+                @foreach (var skill in SoftSkills)
                 {
                     <div class="skills__item">
                         <div class="skills__icon">
@@ -252,6 +257,17 @@
                 Gallery = new()
                 {
                     "img/yoovisit.png"
+                }
+            },
+            new Project
+            {
+                Title = "Site web QualitysRH",
+                Description = "Site vitrine développé pour QualitysRH, juriste indépendant spécialisé dans la qualité de vie et des conditions de travail.",
+                ImageUrl = "img/qualitysRHaccueil.png",
+                Tags = new() { TechTag.HtmlCss, TechTag.PHP, TechTag.JavaScript, TechTag.Sql },
+                Gallery = new()
+                {
+                    "img/qualitysRHaccueil.png"
                 }
             }
         };

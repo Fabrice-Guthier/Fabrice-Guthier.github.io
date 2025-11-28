@@ -3,28 +3,28 @@
   "WorkspaceRootPath": "C:\\DEV\\Portfolio\\Fabrice-Guthier.github.io\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3A326EED-2DBB-46C4-8524-478C6312FFC3}|Portfolio\\Portfolio.csproj|c:\\dev\\portfolio\\fabrice-guthier.github.io\\portfolio\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3A326EED-2DBB-46C4-8524-478C6312FFC3}|Portfolio\\Portfolio.csproj|solutionrelative:portfolio\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3A326EED-2DBB-46C4-8524-478C6312FFC3}|Portfolio\\Portfolio.csproj|c:\\dev\\portfolio\\fabrice-guthier.github.io\\portfolio\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3A326EED-2DBB-46C4-8524-478C6312FFC3}|Portfolio\\Portfolio.csproj|solutionrelative:portfolio\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{3A326EED-2DBB-46C4-8524-478C6312FFC3}|Portfolio\\Portfolio.csproj|c:\\dev\\portfolio\\fabrice-guthier.github.io\\portfolio\\wwwroot\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{3A326EED-2DBB-46C4-8524-478C6312FFC3}|Portfolio\\Portfolio.csproj|solutionrelative:portfolio\\wwwroot\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3A326EED-2DBB-46C4-8524-478C6312FFC3}|Portfolio\\Portfolio.csproj|c:\\dev\\portfolio\\fabrice-guthier.github.io\\portfolio\\components\\projectmodal.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3A326EED-2DBB-46C4-8524-478C6312FFC3}|Portfolio\\Portfolio.csproj|solutionrelative:portfolio\\components\\projectmodal.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{3A326EED-2DBB-46C4-8524-478C6312FFC3}|Portfolio\\Portfolio.csproj|c:\\dev\\portfolio\\fabrice-guthier.github.io\\portfolio\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3A326EED-2DBB-46C4-8524-478C6312FFC3}|Portfolio\\Portfolio.csproj|solutionrelative:portfolio\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A326EED-2DBB-46C4-8524-478C6312FFC3}|Portfolio\\Portfolio.csproj|c:\\dev\\portfolio\\fabrice-guthier.github.io\\portfolio\\wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3A326EED-2DBB-46C4-8524-478C6312FFC3}|Portfolio\\Portfolio.csproj|solutionrelative:portfolio\\wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3A326EED-2DBB-46C4-8524-478C6312FFC3}|Portfolio\\Portfolio.csproj|c:\\dev\\portfolio\\fabrice-guthier.github.io\\portfolio\\models\\project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3A326EED-2DBB-46C4-8524-478C6312FFC3}|Portfolio\\Portfolio.csproj|solutionrelative:portfolio\\models\\project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3A326EED-2DBB-46C4-8524-478C6312FFC3}|Portfolio\\Portfolio.csproj|c:\\dev\\portfolio\\fabrice-guthier.github.io\\portfolio\\wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3A326EED-2DBB-46C4-8524-478C6312FFC3}|Portfolio\\Portfolio.csproj|solutionrelative:portfolio\\wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{3A326EED-2DBB-46C4-8524-478C6312FFC3}|Portfolio\\Portfolio.csproj|c:\\dev\\portfolio\\fabrice-guthier.github.io\\portfolio\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3A326EED-2DBB-46C4-8524-478C6312FFC3}|Portfolio\\Portfolio.csproj|solutionrelative:portfolio\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A326EED-2DBB-46C4-8524-478C6312FFC3}|Portfolio\\Portfolio.csproj|c:\\dev\\portfolio\\fabrice-guthier.github.io\\portfolio\\components\\projectmodal.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3A326EED-2DBB-46C4-8524-478C6312FFC3}|Portfolio\\Portfolio.csproj|solutionrelative:portfolio\\components\\projectmodal.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3A326EED-2DBB-46C4-8524-478C6312FFC3}|Portfolio\\Portfolio.csproj|c:\\dev\\portfolio\\fabrice-guthier.github.io\\portfolio\\components\\projectcard.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -33,10 +33,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{3A326EED-2DBB-46C4-8524-478C6312FFC3}|Portfolio\\Portfolio.csproj|c:\\dev\\portfolio\\fabrice-guthier.github.io\\portfolio\\portfolio.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{3A326EED-2DBB-46C4-8524-478C6312FFC3}|Portfolio\\Portfolio.csproj|solutionrelative:portfolio\\portfolio.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3A326EED-2DBB-46C4-8524-478C6312FFC3}|Portfolio\\Portfolio.csproj|c:\\dev\\portfolio\\fabrice-guthier.github.io\\portfolio\\wwwroot\\.nojekyll||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{3A326EED-2DBB-46C4-8524-478C6312FFC3}|Portfolio\\Portfolio.csproj|solutionrelative:portfolio\\wwwroot\\.nojekyll||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3A326EED-2DBB-46C4-8524-478C6312FFC3}|Portfolio\\Portfolio.csproj|c:\\dev\\portfolio\\fabrice-guthier.github.io\\portfolio\\enum\\tags.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -70,37 +66,50 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "MainLayout.razor",
               "DocumentMoniker": "C:\\DEV\\Portfolio\\Fabrice-Guthier.github.io\\Portfolio\\Layout\\MainLayout.razor",
               "RelativeDocumentMoniker": "Portfolio\\Layout\\MainLayout.razor",
               "ToolTip": "C:\\DEV\\Portfolio\\Fabrice-Guthier.github.io\\Portfolio\\Layout\\MainLayout.razor",
               "RelativeToolTip": "Portfolio\\Layout\\MainLayout.razor",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAABcAAAASAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADEAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-11-26T13:21:39.031Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Home.razor",
               "DocumentMoniker": "C:\\DEV\\Portfolio\\Fabrice-Guthier.github.io\\Portfolio\\Pages\\Home.razor",
               "RelativeDocumentMoniker": "Portfolio\\Pages\\Home.razor",
               "ToolTip": "C:\\DEV\\Portfolio\\Fabrice-Guthier.github.io\\Portfolio\\Pages\\Home.razor",
               "RelativeToolTip": "Portfolio\\Pages\\Home.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAABEAAAAAAAAAAAAAADgAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-11-26T12:41:36.031Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
+              "Title": "style.css",
+              "DocumentMoniker": "C:\\DEV\\Portfolio\\Fabrice-Guthier.github.io\\Portfolio\\wwwroot\\css\\style.css",
+              "RelativeDocumentMoniker": "Portfolio\\wwwroot\\css\\style.css",
+              "ToolTip": "C:\\DEV\\Portfolio\\Fabrice-Guthier.github.io\\Portfolio\\wwwroot\\css\\style.css",
+              "RelativeToolTip": "Portfolio\\wwwroot\\css\\style.css",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAAGsAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-11-26T12:41:36.06Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Project.cs",
               "DocumentMoniker": "C:\\DEV\\Portfolio\\Fabrice-Guthier.github.io\\Portfolio\\Models\\Project.cs",
               "RelativeDocumentMoniker": "Portfolio\\Models\\Project.cs",
@@ -108,7 +117,8 @@
               "RelativeToolTip": "Portfolio\\Models\\Project.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-26T12:41:36.065Z"
+              "WhenOpened": "2025-11-26T12:41:36.065Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -124,7 +134,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "ProjectModal.razor",
               "DocumentMoniker": "C:\\DEV\\Portfolio\\Fabrice-Guthier.github.io\\Portfolio\\Components\\ProjectModal.razor",
               "RelativeDocumentMoniker": "Portfolio\\Components\\ProjectModal.razor",
@@ -137,19 +147,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "style.css",
-              "DocumentMoniker": "C:\\DEV\\Portfolio\\Fabrice-Guthier.github.io\\Portfolio\\wwwroot\\css\\style.css",
-              "RelativeDocumentMoniker": "Portfolio\\wwwroot\\css\\style.css",
-              "ToolTip": "C:\\DEV\\Portfolio\\Fabrice-Guthier.github.io\\Portfolio\\wwwroot\\css\\style.css",
-              "RelativeToolTip": "Portfolio\\wwwroot\\css\\style.css",
-              "ViewState": "AgIAADAAAAAAAAAAAAAAABUDAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-11-26T12:41:36.06Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
               "Title": "index.html",
               "DocumentMoniker": "C:\\DEV\\Portfolio\\Fabrice-Guthier.github.io\\Portfolio\\wwwroot\\index.html",
               "RelativeDocumentMoniker": "Portfolio\\wwwroot\\index.html",
@@ -157,19 +154,8 @@
               "RelativeToolTip": "Portfolio\\wwwroot\\index.html",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-11-26T12:41:36.076Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": ".nojekyll",
-              "DocumentMoniker": "C:\\DEV\\Portfolio\\Fabrice-Guthier.github.io\\Portfolio\\wwwroot\\.nojekyll",
-              "RelativeDocumentMoniker": "Portfolio\\wwwroot\\.nojekyll",
-              "ToolTip": "C:\\DEV\\Portfolio\\Fabrice-Guthier.github.io\\Portfolio\\wwwroot\\.nojekyll",
-              "RelativeToolTip": "Portfolio\\wwwroot\\.nojekyll",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-11-26T14:47:40.152Z"
+              "WhenOpened": "2025-11-26T12:41:36.076Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -185,7 +171,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 9,
               "Title": "Skill.cs",
               "DocumentMoniker": "C:\\DEV\\Portfolio\\Fabrice-Guthier.github.io\\Portfolio\\Models\\Skill.cs",
               "RelativeDocumentMoniker": "Portfolio\\Models\\Skill.cs",
@@ -197,7 +183,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 8,
               "Title": "Tags.cs",
               "DocumentMoniker": "C:\\DEV\\Portfolio\\Fabrice-Guthier.github.io\\Portfolio\\Enum\\Tags.cs",
               "RelativeDocumentMoniker": "Portfolio\\Enum\\Tags.cs",
@@ -209,7 +195,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 10,
               "Title": "TagExtensions.cs",
               "DocumentMoniker": "C:\\DEV\\Portfolio\\Fabrice-Guthier.github.io\\Portfolio\\Extensions\\TagExtensions.cs",
               "RelativeDocumentMoniker": "Portfolio\\Extensions\\TagExtensions.cs",
@@ -221,7 +207,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 12,
               "Title": "App.razor",
               "DocumentMoniker": "C:\\DEV\\Portfolio\\Fabrice-Guthier.github.io\\Portfolio\\App.razor",
               "RelativeDocumentMoniker": "Portfolio\\App.razor",
@@ -233,7 +219,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 11,
               "Title": "_Imports.razor",
               "DocumentMoniker": "C:\\DEV\\Portfolio\\Fabrice-Guthier.github.io\\Portfolio\\_Imports.razor",
               "RelativeDocumentMoniker": "Portfolio\\_Imports.razor",
@@ -245,7 +231,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 13,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\DEV\\Portfolio\\Fabrice-Guthier.github.io\\Portfolio\\Program.cs",
               "RelativeDocumentMoniker": "Portfolio\\Program.cs",

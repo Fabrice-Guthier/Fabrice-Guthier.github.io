@@ -28,7 +28,7 @@ h1, h2, h3, h4, h5, h6 {
 h1, .h1 {
     font-size: 3rem;
     font-weight: 700;
-    color: #000;
+    color: #232;
 }
 
 h2, .h2 {
@@ -105,7 +105,7 @@ li {
 /* --- SECTIONS --- */
 
 section {
-    padding: 5.5rem 0;
+    padding: 4.5rem 0;
 }
 
 .section-header {
@@ -114,8 +114,7 @@ section {
 
 .section-title {
     margin-top: 0;
-    color: #000;
-    font-size: 3rem;
+    color: #232;
     text-transform: uppercase;
 }
 
@@ -159,9 +158,9 @@ section {
     transition: color 0.3s;
 }
 
-    .header a:hover {
-        color: rgb(255, 123, 0);
-    }
+.header a:hover {
+    color: rgb(255, 123, 0);
+}
 
 .header .topright {
     display: flex;
@@ -173,9 +172,9 @@ section {
     display: flex;
 }
 
-    .socials a {
-        padding: 0 5px;
-    }
+.socials a {
+    padding: 0 5px;
+}
 
 /* --- BOUTON BURGER --- */
 
@@ -363,7 +362,7 @@ section {
 /* --- SKILLS & ABOUT --- */
 
 .about .section-title {
-    margin-top: 2.3rem;
+    margin-top: 1.7rem;
     text-align: center;
 }
 
@@ -379,6 +378,8 @@ section {
 
 .skill__content {
     flex: 1;
+    margin: 20px auto;
+    padding: 10px;
 }
 
 .skill h3 {
