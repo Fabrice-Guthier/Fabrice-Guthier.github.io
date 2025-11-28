@@ -378,7 +378,6 @@ section {
 
 .skill__content {
     flex: 1;
-    margin: 20px auto;
     padding: 10px;
 }
 
@@ -391,7 +390,7 @@ section {
         text-align: center;
     }
 
-    .skill__icon {
+    .skills__icon {
         margin: 0 auto;
     }
 }
@@ -402,7 +401,7 @@ section {
         align-items: center;
     }
 
-    .skill__icon {
+    .skills__icon {
         margin-right: 2rem;
     }
 }
